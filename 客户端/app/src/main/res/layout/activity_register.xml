@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/zz_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zh"
+        android:textSize="24sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mm"
+        android:textSize="24sp"
+        android:layout_alignLeft="@id/zz_text_view"
+        android:layout_marginTop="60dp"
+        android:id="@+id/textView2" />
+
+
+
+    <EditText
+        android:id="@+id/raccount_Edit_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_toEndOf="@+id/zz_text_view"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        android:layout_toRightOf="@+id/zz_text_view" />
+
+    <EditText
+        android:id="@+id/rpassword_Edit_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/raccount_Edit_Text"
+        android:layout_below="@+id/raccount_Edit_Text"
+        android:ems="10"
+        android:inputType="textPassword" />
+
+
+
+    <Button
+        android:id="@+id/qd_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/qd"
+        android:layout_marginLeft="70dp"
+        android:layout_marginTop="200dp"
+        />
+
+    <Button
+        android:id="@+id/qx_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/qx"
+        android:layout_alignBottom="@id/qd_button"
+        android:layout_marginLeft="250dp"
+        />
+
+</RelativeLayout>

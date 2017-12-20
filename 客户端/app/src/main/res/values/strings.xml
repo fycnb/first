@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Test</string>
+    <string name="zh">账号：</string>
+    <string name="mm">密码：</string>
+    <string name="dl">登录</string>
+    <string name="zc">注册</string>
+    <string name="confirm">重新确认：</string>
+    <string name="qd">确定</string>
+    <string name="qx">取消</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints
+  xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime"
+  version="2.0">
+  <endpoint
+      name="Login"
+      implementation="com.servlet.Login"
+      url-pattern="/Login"/>
+  <endpoint
+      name="Register"
+      implementation="com.servlet.Register"
+      url-pattern="/Register"/>
+  <endpoint
+      name="testSerlvet"
+      implementation="com.servlet.testSerlvet"
+      url-pattern="/testSerlvet"/>
+</endpoints>
