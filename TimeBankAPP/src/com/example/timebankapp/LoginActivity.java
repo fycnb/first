@@ -32,7 +32,8 @@ public class LoginActivity extends Activity {
                 final String password = etPassword.getText().toString().trim();
 
                 new Thread(){
-                    public void run(){
+                    @Override
+					public void run(){
                         final String result = LoginService.LoginByPost(account,password);
 //                        System.out.println(result);
                         if(result != null) {
@@ -50,7 +51,8 @@ public class LoginActivity extends Activity {
                                 //«Î«Û ß∞‹£¨µØ≥ˆtoast
                                 runOnUiThread(new Runnable() {
                                   
-                                    public void run() {
+                                    @Override
+									public void run() {
                                         Toast.makeText(LoginActivity.this, "’À∫≈ªÚ√‹¬Î¥ÌŒÛ", 0).show();
 
                                     }

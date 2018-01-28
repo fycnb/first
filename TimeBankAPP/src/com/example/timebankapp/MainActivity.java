@@ -1,6 +1,5 @@
 package com.example.timebankapp;
 
-import android.app.Activity;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -48,10 +47,10 @@ public class MainActivity extends TabActivity {
                 .setContent(intent2));
         tabHost.addTab(tabHost.newTabSpec("兑换")
                 .setIndicator(createTabIcon(R.drawable.ic_launcher, "兑换"))
-                .setContent(intent4));
+                .setContent(intent3));
         tabHost.addTab(tabHost.newTabSpec("我的")
                 .setIndicator(createTabIcon(R.drawable.ic_launcher, "我的"))
-                .setContent(intent3));
+                .setContent(intent4));
         if(tab.equalsIgnoreCase("tab0")){
             tabHost.setCurrentTabByTag("tab0");
         }

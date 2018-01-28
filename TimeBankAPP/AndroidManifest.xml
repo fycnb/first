@@ -26,10 +26,7 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
-        <activity
-            android:name=".FirstActivity"
-            android:label="@string/title_activity_first" >
-        </activity>
+        
         <activity
             android:name=".NewsActivity"
             android:label="@string/title_activity_news" >
@@ -41,6 +38,10 @@
         <activity
             android:name=".MYActivity"
             android:label="@string/title_activity_my" >
+        </activity>
+        <activity
+            android:name=".FirstActivity"
+            android:label="@string/title_activity_first" >
         </activity>
     </application>
 
