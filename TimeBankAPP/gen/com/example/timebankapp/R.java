@@ -26,12 +26,9 @@ public final class R {
     }
     public static final class drawable {
         public static final int ic_launcher=0x7f020000;
-        public static final int img1=0x7f020001;
-        public static final int img2=0x7f020002;
-        public static final int img3=0x7f020003;
-        public static final int img4=0x7f020004;
     }
     public static final class id {
+<<<<<<< HEAD
         public static final int action_settings=0x7f090019;
         public static final int activityhistory_Button=0x7f090006;
         public static final int cash_Button=0x7f090015;
@@ -70,6 +67,18 @@ public final class R {
         public static final int activity_second=0x7f030007;
         public static final int activity_third=0x7f030008;
         public static final int tab_icon=0x7f030009;
+=======
+        public static final int action_settings=0x7f080006;
+        public static final int checkboxHolder=0x7f080003;
+        public static final int clicklogin=0x7f080005;
+        public static final int etPassword=0x7f080002;
+        public static final int etUsername=0x7f080001;
+        public static final int loginButtonHolder=0x7f080004;
+        public static final int textFieldHolder=0x7f080000;
+    }
+    public static final class layout {
+        public static final int activity_main=0x7f030000;
+>>>>>>> aefe221fab41aebe0d17841d4324be5c45315a27
     }
     public static final class menu {
         public static final int dh=0x7f080000;
@@ -80,6 +89,7 @@ public final class R {
         public static final int news=0x7f080005;
     }
     public static final class string {
+<<<<<<< HEAD
         public static final int action_settings=0x7f060002;
         public static final int action_sign_in=0x7f060005;
         public static final int activityinquire=0x7f06000c;
@@ -93,6 +103,14 @@ public final class R {
         public static final int title_activity_news=0x7f060009;
         public static final int user_name=0x7f060003;
         public static final int user_password=0x7f060004;
+=======
+        public static final int action_settings=0x7f050002;
+        public static final int action_sign_in=0x7f050005;
+        public static final int app_name=0x7f050000;
+        public static final int hello_world=0x7f050001;
+        public static final int user_name=0x7f050003;
+        public static final int user_password=0x7f050004;
+>>>>>>> aefe221fab41aebe0d17841d4324be5c45315a27
     }
     public static final class style {
         /** 
