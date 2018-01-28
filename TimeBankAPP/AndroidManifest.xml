@@ -22,22 +22,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".FirstActivity"
-            android:label="@string/title_activity_first" >
-        </activity>
-        <activity
-            android:name=".SecondActivity"
-            android:label="@string/title_activity_second" >
-        </activity>
-        <activity
-            android:name=".ThirdActivity"
-            android:label="@string/title_activity_third" >
-        </activity>
-        <activity
-            android:name=".FourActivity"
-            android:label="@string/title_activity_four" >
-        </activity>
     </application>
 
 </manifest>
