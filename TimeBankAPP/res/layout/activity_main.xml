@@ -1,8 +1,8 @@
 <TabHost xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@android:id/tabhost"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
-    
+    android:layout_height="match_parent"
+    android:background="#fff" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,8 +16,6 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" >
-
-            
         </FrameLayout>
 
         <!-- 第二部分：选项卡部分,id必须是"tabs" -->
@@ -25,9 +23,9 @@
         <TabWidget
             android:id="@android:id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:showDividers="none"
-            android:background="@color/white" >
+            android:layout_height="55dp"
+            android:background="#4915e5"
+            android:showDividers="none" >
         </TabWidget>
     </LinearLayout>
 

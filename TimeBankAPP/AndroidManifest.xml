@@ -13,9 +13,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name=".LoginActivity"
-            android:label="@string/title_activity_login" >
+        <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,6 +21,8 @@
             </intent-filter>
         </activity>
 <<<<<<< HEAD
+=======
+
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
@@ -40,12 +40,15 @@
             android:name=".MYActivity"
             android:label="@string/title_activity_my" >
         </activity>
+>>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
         <activity
-            android:name=".FirstActivity"
-            android:label="@string/title_activity_first" >
+            android:name=".SecondActivity"
+            android:label="@string/title_activity_second" >
         </activity>
+<<<<<<< HEAD
 =======
->>>>>>> aefe221fab41aebe0d17841d4324be5c45315a27
+
+>>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
     </application>
 
 </manifest>
