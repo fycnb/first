@@ -22,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
+
         <activity
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
@@ -44,8 +44,7 @@
             android:name=".FirstActivity"
             android:label="@string/title_activity_first" >
         </activity>
-=======
->>>>>>> aefe221fab41aebe0d17841d4324be5c45315a27
+
     </application>
 
 </manifest>
