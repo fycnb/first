@@ -28,8 +28,6 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-<<<<<<< HEAD
-<<<<<<< HEAD
         public static final int action_settings=0x7f09001a;
         public static final int activityhistory_Button=0x7f09000d;
         public static final int activityinfo_ListView=0x7f09000b;
@@ -57,44 +55,14 @@ public final class R {
         public static final int timemoneynumber_TextView=0x7f090001;
         public static final int timesequence_Button=0x7f090008;
         public static final int tv_title=0x7f090019;
-=======
-=======
->>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
-        public static final int action_settings=0x7f090008;
-        public static final int checkboxHolder=0x7f090003;
-        public static final int clicklogin=0x7f090005;
-        public static final int etPassword=0x7f090002;
-        public static final int etUsername=0x7f090001;
-        public static final int iv_icon=0x7f090006;
-        public static final int loginButtonHolder=0x7f090004;
-        public static final int textFieldHolder=0x7f090000;
-        public static final int tv_title=0x7f090007;
-<<<<<<< HEAD
->>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
-=======
->>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
     }
     public static final class layout {
         public static final int activity_dh=0x7f030000;
         public static final int activity_first=0x7f030001;
-<<<<<<< HEAD
-<<<<<<< HEAD
         public static final int activity_main=0x7f030002;
         public static final int activity_my=0x7f030003;
         public static final int activity_news=0x7f030004;
         public static final int tab_icon=0x7f030005;
-=======
-=======
->>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
-        public static final int activity_login=0x7f030002;
-        public static final int activity_main=0x7f030003;
-        public static final int activity_my=0x7f030004;
-        public static final int activity_news=0x7f030005;
-        public static final int tab_icon=0x7f030006;
-<<<<<<< HEAD
->>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
-=======
->>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
     }
     public static final class menu {
         public static final int dh=0x7f080000;
@@ -106,8 +74,16 @@ public final class R {
     }
     public static final class string {
         public static final int action_settings=0x7f060002;
+        public static final int action_sign_in=0x7f060006;
+        public static final int activityinquire=0x7f06000d;
         public static final int app_name=0x7f060000;
         public static final int hello_world=0x7f060001;
+        public static final int title_activity_dh=0x7f06000b;
+        public static final int title_activity_first=0x7f060009;
+        public static final int title_activity_login=0x7f060007;
+        public static final int title_activity_main=0x7f060008;
+        public static final int title_activity_my=0x7f06000c;
+        public static final int title_activity_news=0x7f06000a;
         public static final int title_activity_second=0x7f060005;
         public static final int user_name=0x7f060003;
         public static final int user_password=0x7f060004;

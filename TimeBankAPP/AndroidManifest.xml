@@ -20,11 +20,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
 
         <activity
             android:name=".MainActivity"
@@ -43,19 +38,11 @@
             android:name=".MYActivity"
             android:label="@string/title_activity_my" >
         </activity>
->>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
+
         <activity
             android:name=".SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
->>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
-=======
-
->>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
     </application>
 
 </manifest>
