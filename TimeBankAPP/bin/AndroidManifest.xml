@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         <activity android:name="com.example.timebankapp.LoginActivity"/>
         
@@ -34,6 +35,8 @@
         
         <activity android:name="com.example.timebankapp.MYActivity"/>
 =======
+=======
+>>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
 
         <activity
             android:name=".MainActivity"
@@ -57,6 +60,9 @@
             android:label="@string/title_activity_first" >
         </activity>
 
+<<<<<<< HEAD
+>>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
+=======
 >>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
     </application>
 

@@ -7,10 +7,13 @@
     <string name="user_name">用户名</string>
     <string name="user_password">密码</string>
 
+<<<<<<< HEAD
     <string name="title_activity_second">SecondActivity</string>
 
 
 
+=======
+>>>>>>> f4b02ea5fbc7ef42bfde5d0452fe2d3f3d001a01
     <string name="action_sign_in">登陆</string>
 
     <string name="title_activity_login">LoginActivity</string>
