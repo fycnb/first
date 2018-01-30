@@ -3,6 +3,7 @@ package com.example.timebankapp;
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,16 +41,16 @@ public class MainActivity extends TabActivity {
         tabHost = getTabHost();
         //这里tab0是第一个，tab1是第二个窗口，以此类推
         tabHost.addTab(tabHost.newTabSpec("首页")
-                .setIndicator(createTabIcon(R.drawable.ic_launcher, "首页"))
+                .setIndicator(createTabIcon(R.color.selector_home, "首页"))
                 .setContent(intent1));
         tabHost.addTab(tabHost.newTabSpec("消息")
-                .setIndicator(createTabIcon(R.drawable.ic_launcher, "消息"))
+                .setIndicator(createTabIcon(R.color.selector_news, "消息"))
                 .setContent(intent2));
         tabHost.addTab(tabHost.newTabSpec("兑换")
-                .setIndicator(createTabIcon(R.drawable.ic_launcher, "兑换"))
+                .setIndicator(createTabIcon(R.color.selector_dh, "兑换"))
                 .setContent(intent3));
         tabHost.addTab(tabHost.newTabSpec("我的")
-                .setIndicator(createTabIcon(R.drawable.ic_launcher, "我的"))
+                .setIndicator(createTabIcon(R.color.selector_my, "我的"))
                 .setContent(intent4));
         if(tab.equalsIgnoreCase("tab0")){
             tabHost.setCurrentTabByTag("tab0");
@@ -67,7 +68,7 @@ public class MainActivity extends TabActivity {
 		
 		TextView tv = (TextView)view.findViewById(R.id.tv_title);
 		tv.setText(title);
-			
+		tv.setGravity(Gravity.CENTER);
 		return view;
 	}
 

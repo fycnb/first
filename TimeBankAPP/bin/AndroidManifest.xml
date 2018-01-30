@@ -8,28 +8,37 @@
         android:minSdkVersion="19"
         android:targetSdkVersion="19" />
 
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@android:style/Theme.NoTitleBar" >
-        <activity android:name=".LoginActivity" />
-
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme" >
+        <activity android:name=".LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
-        <activity android:name=".NewsActivity" />
-        
-        <activity android:name=".DHActivity"/>
-        
-        <activity android:name=".MYActivity" />
 
-        <activity android:name=".FirstActivity"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        
+        <activity
+            android:name=".NewsActivity"
+            android:label="@string/title_activity_news" >
+        </activity>
+        <activity
+            android:name=".DHActivity"
+            android:label="@string/title_activity_dh" >
+        </activity>
+        <activity
+            android:name=".MYActivity"
+            android:label="@string/title_activity_my" >
+        </activity>
 
     </application>
 
