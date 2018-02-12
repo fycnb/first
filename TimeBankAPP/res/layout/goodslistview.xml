@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/item_selector"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginBottom="3dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="3dp" >
+
+        <ImageView
+            android:id="@+id/goodsimage_ImageView"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="#ddd"
+            android:src="@drawable/noimage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="10dp" >
+
+            <TextView
+                android:id="@+id/goodsdetails_TextView"
+                android:layout_width="169dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="洗11衣粉 洗衣粉洗衣粉 洗衣粉 洗衣粉 洗衣粉"
+                android:textColor="#000"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/goodspositiong_TextView"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="7dp"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:paddingLeft="3dp"
+                android:singleLine="true"
+                android:text="西青区"
+                android:textColor="#C6C4C1"
+                android:textSize="22sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <TextView
+                    android:id="@+id/goodsmoney_TextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="10"
+                    android:textColor="#FF8600"
+                    android:textSize="27sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingTop="5dp"
+                    android:text="JB"
+                    android:textColor="#FF8600"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="剩余:"
+                    android:textColor="#C6C4C1"
+                    android:textSize="17sp" />
+
+                <TextView
+                    android:id="@+id/goodsnumber_TextView"
+                    android:layout_width="45dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="5555"
+                    android:textColor="#C6C4C1"
+                    android:textSize="17sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

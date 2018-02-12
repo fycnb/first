@@ -1,5 +1,10 @@
 package com.example.timebankapp;
 
+import com.example.timebankapp.Convert.DHActivity;
+import com.example.timebankapp.First.FirstActivity;
+import com.example.timebankapp.My.MYActivity;
+import com.example.timebankapp.News.NewsActivity;
+
 import android.app.TabActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,81 +19,59 @@ import android.widget.TextView;
 
 public class MainActivity extends TabActivity {
 
-//	private RadioButton guide_home, guide_store, guide_cart,guide_ww;
-    private Intent intent1;
-    private Intent intent2;
-    private Intent intent3;
-    private Intent intent4;
-    private String tab="tab0";
-//    private int currIndex = 0;
-    private TabHost tabHost;
-    
+	// private RadioButton guide_home, guide_store, guide_cart,guide_ww;
+	private Intent intent1;
+	private Intent intent2;
+	private Intent intent3;
+	private Intent intent4;
+	private String tab = "tab0";
+	// private int currIndex = 0;
+	private TabHost tabHost;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		
-        //初始化四个Activity
-        intent1 = new Intent(this, FirstActivity.class);
-        intent2 = new Intent(this, NewsActivity.class);
-        intent3 = new Intent(this, DHActivity.class);
-        intent4 = new Intent(this, MYActivity.class);
-//        init();
-        inittAB();
+
+		// 锟斤拷始锟斤拷锟侥革拷Activity
+		intent1 = new Intent(this, FirstActivity.class);
+		intent2 = new Intent(this, NewsActivity.class);
+		intent3 = new Intent(this, DHActivity.class);
+		intent4 = new Intent(this, MYActivity.class);
+		// init();
+		inittAB();
 	}
-    //填充TabHost
-    private void inittAB() {
-        tabHost = getTabHost();
-        //这里tab0是第一个，tab1是第二个窗口，以此类推
-        tabHost.addTab(tabHost.newTabSpec("首页")
-                .setIndicator(createTabIcon(R.color.selector_home, "首页"))
-                .setContent(intent1));
-        tabHost.addTab(tabHost.newTabSpec("消息")
-                .setIndicator(createTabIcon(R.color.selector_news, "消息"))
-                .setContent(intent2));
-        tabHost.addTab(tabHost.newTabSpec("兑换")
-                .setIndicator(createTabIcon(R.color.selector_dh, "兑换"))
-                .setContent(intent3));
-        tabHost.addTab(tabHost.newTabSpec("我的")
-                .setIndicator(createTabIcon(R.color.selector_my, "我的"))
-                .setContent(intent4));
-        if(tab.equalsIgnoreCase("tab0")){
-            tabHost.setCurrentTabByTag("tab0");
-        }
-    }
-    
-	public View createTabIcon(int resId,String title){
-		
+
+	// 锟斤拷锟絋abHost
+	private void inittAB() {
+		tabHost = getTabHost();
+		// 锟斤拷锟斤拷tab0锟角碉拷一锟斤拷锟斤拷tab1锟角第讹拷锟斤拷锟斤拷锟节ｏ拷锟皆达拷锟斤拷锟斤拷
+		tabHost.addTab(
+				tabHost.newTabSpec("棣栭〉").setIndicator(createTabIcon(R.color.selector_home, "棣栭〉")).setContent(intent1));
+		tabHost.addTab(
+				tabHost.newTabSpec("娑堟伅").setIndicator(createTabIcon(R.color.selector_news, "娑堟伅")).setContent(intent2));
+		tabHost.addTab(
+				tabHost.newTabSpec("鍏戞崲").setIndicator(createTabIcon(R.color.selector_dh, "鍏戞崲")).setContent(intent3));
+		tabHost.addTab(
+				tabHost.newTabSpec("鎴戠殑").setIndicator(createTabIcon(R.color.selector_my, "鎴戠殑")).setContent(intent4));
+		if (tab.equalsIgnoreCase("tab0")) {
+			tabHost.setCurrentTabByTag("tab0");
+		}
+	}
+
+	public View createTabIcon(int resId, String title) {
+
 		View view = null;
-		
+
 		view = LayoutInflater.from(this).inflate(R.layout.tab_icon, null);
 
-		ImageView iv = (ImageView)view.findViewById(R.id.iv_icon);
+		ImageView iv = (ImageView) view.findViewById(R.id.iv_icon);
 		iv.setImageResource(resId);
-		
-		TextView tv = (TextView)view.findViewById(R.id.tv_title);
+
+		TextView tv = (TextView) view.findViewById(R.id.tv_title);
 		tv.setText(title);
 		tv.setGravity(Gravity.CENTER);
 		return view;
 	}
 
-
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
-	}
-
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
-	}
 }

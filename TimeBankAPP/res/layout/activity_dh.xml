@@ -2,80 +2,535 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     android:orientation="vertical"
-    tools:context="com.example.timebankapp.DHActivity" >
+    tools:context="com.example.timebankapp.Convert.DHActivity" >
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="#4915e5" >
+        android:layout_height="80dp"
+        android:background="#4915e5"
+        android:gravity="center_vertical" >
 
         <ImageView
-            android:id="@+id/timemoneyimage_ImageView"
-            android:layout_width="45dp"
+            android:id="@+id/myimage_ImageView"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
-            android:layout_marginLeft="5dp" />
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/userimage" />
 
         <TextView
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:text="我的时间币:"
+            android:paddingTop="30dp"
+            android:text="剩余时间币:"
             android:textSize="18sp" />
 
         <TextView
             android:id="@+id/timemoneynumber_TextView"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="60dp"
             android:layout_weight="1"
             android:gravity="center_vertical"
             android:text="xxxx"
             android:textColor="#B22F2E"
-            android:textSize="16sp" />
+            android:textSize="54sp" />
 
-        <ImageView
+        <Button
+            android:id="@+id/refresh_Button"
             android:layout_width="45dp"
-            android:layout_height="match_parent"
-            android:layout_marginRight="5dp" />
+            android:layout_height="45dp"
+            android:layout_marginRight="20dp" />
     </LinearLayout>
 
-    <LinearLayout
+    <TabHost
+        android:id="@+id/Convert_TabHost"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
-        android:background="#F0EDED" >
+        android:layout_height="match_parent" >
 
-        <Button
-            android:id="@+id/goods_Button"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:text="商品列表"
-            android:textSize="11sp" />
+            android:orientation="vertical" >
 
-        <Button
-            android:id="@+id/serve_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:text="服务列表"
-            android:textSize="11sp" />
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#F0EDED"
+                android:gravity="center"
+                android:showDividers="none" >
+            </TabWidget>
 
-        <Button
-            android:id="@+id/cash_Button"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="1dp"
-            android:layout_marginRight="1dp"
-            android:layout_weight="1"
-            android:text="提现"
-            android:textSize="11sp" />
-    </LinearLayout>
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" >
 
-    <ListView
-        android:id="@+id/convertlist_ListView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+                <!-- 第一页 ..................................................... -->
+
+                <LinearLayout
+                    android:id="@+id/goodspage_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="#F0EDED"
+                        android:paddingTop="5dp" >
+
+                        <Button
+                            android:id="@+id/class_Button"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:text="筛选" />
+
+                        <EditText
+                            android:id="@+id/goodsseek_EditText"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:hint="商品查询"
+                            android:paddingLeft="15dp"
+                            android:singleLine="true" />
+
+                        <Button
+                            android:id="@+id/goodsseek_Button"
+                            android:layout_width="45dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/goodsclass_LinearLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="65dp"
+                        android:orientation="vertical"
+                        android:visibility="gone" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="商品类型"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="价格范围"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="可否兑换"
+                                android:textSize="17sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:gravity="center_vertical" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+
+                            <Spinner
+                                android:id="@+id/type_Spinner"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/spinner_selector"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown" >
+                            </Spinner>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+
+                            <Spinner
+                                android:id="@+id/money_Spinner"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/spinner_selector"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="2" />
+
+                            <Spinner
+                                android:id="@+id/cash_Spinner"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:background="@color/spinner_selector"
+                                android:gravity="center"
+                                android:spinnerMode="dropdown" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/goodsinfo_ListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:divider="#cccccc" />
+
+                    <TextView
+                        android:id="@+id/emptygoods_TextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:paddingTop="200dp"
+                        android:text="请检查网络"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <!-- 第二页..................................................... -->
+
+                <LinearLayout
+                    android:id="@+id/servicepage_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:background="#F0EDED"
+                        android:paddingTop="5dp" >
+
+                        <Button
+                            android:id="@+id/class2_Button"
+                            android:layout_width="80dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:text="筛选" />
+
+                        <EditText
+                            android:id="@+id/serviceseek_EditText"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:hint="服务查询"
+                            android:paddingLeft="15dp"
+                            android:singleLine="true" />
+
+                        <Button
+                            android:id="@+id/serviceseek_Button"
+                            android:layout_width="45dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="10dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" >
+
+                        <LinearLayout
+                            android:id="@+id/serviceclass_LinearLayout"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:background="#F0EDED"
+                            android:orientation="vertical"
+                            android:visibility="gone" >
+
+                            <ListView
+                                android:id="@+id/serviceclass_ListView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:divider="#cccccc" />
+
+                            <TextView
+                                android:id="@+id/emptyservicename_TextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="请点击筛选重新刷新页面"
+                                android:textSize="18sp" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:background="#4915e5"
+                                android:orientation="vertical" >
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="30dp"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginTop="5dp"
+                                    android:gravity="center_vertical"
+                                    android:paddingLeft="5dp"
+                                    android:text="没有想要的?"
+                                    android:textColor="#000"
+                                    android:textSize="15sp" />
+
+                                <Button
+                                    android:id="@+id/publish_Button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="45dp"
+                                    android:layout_gravity="right"
+                                    android:layout_marginLeft="15dp"
+                                    android:gravity="center"
+                                    android:text="自己发布"
+                                    android:textSize="20sp" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical" >
+
+                            <ListView
+                                android:id="@+id/serviceinfo_ListView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:divider="#cccccc" />
+
+                            <TextView
+                                android:id="@+id/emptyservice_TextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal"
+                                android:paddingTop="200dp"
+                                android:text="请检查网络"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 第三页..................................................... -->
+
+                <LinearLayout
+                    android:id="@+id/cashpage_LinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="尊敬的用户您好"
+                        android:textColor="#FF5834"
+                        android:textSize="35dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="提现时您需要注意以下几条:"
+                        android:textColor="#FF5834"
+                        android:textSize="35dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginTop="10dp"
+                        android:text="1、"
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="2、"
+                        android:textSize="25dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="3、"
+                        android:textSize="25dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp" >
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|right"
+                                android:text="银行卡号 "
+                                android:textColor="#111"
+                                android:textSize="17sp" />
+
+                            <EditText
+                                android:id="@+id/bankcardnumber1_EditText"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:numeric="integer"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/bankcardnumber1_TextView"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:textColor="#FF5834"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp" >
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|right"
+                                android:text="确认卡号 "
+                                android:textColor="#111"
+                                android:textSize="17sp" />
+
+                            <EditText
+                                android:id="@+id/bankcardnumber2_EditText"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:numeric="integer"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/bankcardnumber2_TextView"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:textColor="#FF5834"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp" >
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|right"
+                                android:text="app登录密码"
+                                android:textColor="#111"
+                                android:textSize="17sp" />
+
+                            <EditText
+                                android:id="@+id/apppassword_EditText"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:password="true"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/apppassword_TextView"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:textColor="#FF5834"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="40dp" >
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical|right"
+                                android:text="提现的数额"
+                                android:textColor="#111"
+                                android:textSize="17sp" />
+
+                            <EditText
+                                android:id="@+id/cashnumber_EditText"
+                                android:layout_width="150dp"
+                                android:layout_height="match_parent"
+                                android:numeric="integer"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:id="@+id/cashnumber_TextView"
+                                android:layout_width="100dp"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:textColor="#FF5834"
+                                android:textSize="15sp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="30dp"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            android:paddingRight="30dp" >
+
+                            <CheckBox
+                                android:id="@+id/sure_CheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="false" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="确认已阅读以上事项" />
+                        </LinearLayout>
+
+                        <Button
+                            android:id="@+id/surecash_Button"
+                            android:layout_width="70dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="40dp"
+                            android:enabled="false"
+                            android:text="提现" />
+                    </LinearLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
 
 </LinearLayout>

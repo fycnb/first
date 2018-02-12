@@ -8,7 +8,107 @@
     <servlet-name>LoginServlet</servlet-name>
     <servlet-class>Servlet.LoginServlet</servlet-class>
   </servlet>
+<servlet>
+		<servlet-name>InquireGoodsServlet</servlet-name>
+		<servlet-class>function.InquireGoodsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SeekGoodsServlet</servlet-name>
+		<servlet-class>function.SeekGoodsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>InquireServiceServlet</servlet-name>
+		<servlet-class>function.InquireServiceServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>SeekServiceServlet</servlet-name>
+		<servlet-class>function.SeekServiceServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>InquireServiceClassServlet</servlet-name>
+		<servlet-class>function.InquireServiceClassServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>InquireGoodsClassServlet</servlet-name>
+		<servlet-class>function.InquireGoodsClassServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateServiceTimeServlet</servlet-name>
+		<servlet-class>function.UpdateServiceTimeServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>UpdateInfoServlet</servlet-name>
+		<servlet-class>function.UpdateInfoServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CashGoodsServlet</servlet-name>
+		<servlet-class>function.CashGoodsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CashServiceServlet</servlet-name>
+		<servlet-class>function.CashServiceServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>RefreshMoneyServlet</servlet-name>
+		<servlet-class>function.RefreshMoneyServlet</servlet-class>
+	</servlet>
 
+
+
+
+
+
+
+
+
+
+
+
+
+	<servlet-mapping>
+		<servlet-name>InquireGoodsServlet</servlet-name>
+		<url-pattern>/InquireGoodsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SeekGoodsServlet</servlet-name>
+		<url-pattern>/SeekGoodsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InquireServiceServlet</servlet-name>
+		<url-pattern>/InquireServiceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>SeekServiceServlet</servlet-name>
+		<url-pattern>/SeekServiceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InquireServiceClassServlet</servlet-name>
+		<url-pattern>/InquireServiceClassServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>InquireGoodsClassServlet</servlet-name>
+		<url-pattern>/InquireGoodsClassServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateServiceTimeServlet</servlet-name>
+		<url-pattern>/UpdateServiceTimeServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>UpdateInfoServlet</servlet-name>
+		<url-pattern>/UpdateInfoServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CashGoodsServlet</servlet-name>
+		<url-pattern>/CashGoodsServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CashServiceServlet</servlet-name>
+		<url-pattern>/CashServiceServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RefreshMoneyServlet</servlet-name>
+		<url-pattern>/RefreshMoneyServlet</url-pattern>
+	</servlet-mapping>
 
   <servlet-mapping>
     <servlet-name>LoginServlet</servlet-name>

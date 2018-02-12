@@ -73,5 +73,21 @@ public class DBOper {
 			e.printStackTrace();
 		}
 		return rs;
-	}                   
+	}      
+	
+	public String hint(String sql, String[] param) {
+		String aString = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			if (param != null) {
+				for (int i = 0; i < param.length; i++) {
+					pstmt.setString(i + 1, param[i]);
+				}
+			}
+			rs = pstmt.executeQuery();
+		} catch (SQLException e) {
+			aString = e.getMessage();
+		}
+		return aString;
+	}
 }

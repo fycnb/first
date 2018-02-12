@@ -8,38 +8,36 @@
         android:minSdkVersion="19"
         android:targetSdkVersion="19" />
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".LoginActivity" >
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".First.FirstActivity" />
+        <activity android:name=".News.NewsActivity" />
+        <activity android:name=".Convert.DHActivity" />
+        <activity android:name=".My.MYActivity" />
+        <activity android:name=".Convert.CashActivity" />
+        <activity android:name=".Convert.ServiceActivity" />
+        <activity android:name=".Convert.GoodsActivity" />
         <activity
-            android:name=".MainActivity"
-            android:label="@string/title_activity_main" >
-        </activity>
-        
-        <activity
-            android:name=".NewsActivity"
-            android:label="@string/title_activity_news" >
-        </activity>
-        <activity
-            android:name=".DHActivity"
-            android:label="@string/title_activity_dh" >
+            android:name=".Convert.MoneyDetailsActivity"
+            android:label="@string/title_activity_money_details" >
         </activity>
         <activity
-            android:name=".MYActivity"
-            android:label="@string/title_activity_my" >
+            android:name=".PublishActivity"
+            android:label="@string/title_activity_publish" >
         </activity>
-
     </application>
 
 </manifest>
